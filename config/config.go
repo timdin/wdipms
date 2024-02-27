@@ -3,8 +3,8 @@ package config
 import "encoding/json"
 
 type Config struct {
-	ServiceConfig *ServiceConfig
-	StorageConfig *StorageConfig
+	ServiceConfig *ServiceConfig `yaml:"service_config"`
+	StorageConfig *StorageConfig `yaml:"storage_config"`
 }
 
 type ServiceConfig struct {
