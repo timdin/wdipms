@@ -1,2 +1,9 @@
-genpkl:
-	pkl-gen-go pkl/server.pkl --base-path github.com/timdin/wdipms
+run:
+	docker compose up
+
+build:
+	docker compose build
+
+update:
+	make build
+	make run

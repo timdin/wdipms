@@ -1,21 +1,21 @@
 version: '3.5'
 
 services:
-  mysql:
-    image: mysql:5.7
-    container_name: mysql_wdipms
-    restart: always
-    environment:
-      MYSQL_ROOT_PASSWORD: root
-      MYSQL_DATABASE: wdipms
-      MYSQL_USER: wdipms
-      MYSQL_PASSWORD: wdipms
-    ports:
-      - 3306:3306
-    volumes:
-      - ./mysql:/var/lib/mysql
-    networks:
-      - backend-bridge
+  # mysql:
+  #   image: mysql:5.7
+  #   container_name: mysql_wdipms
+  #   restart: always
+  #   environment:
+  #     MYSQL_ROOT_PASSWORD: root
+  #     MYSQL_DATABASE: wdipms
+  #     MYSQL_USER: wdipms
+  #     MYSQL_PASSWORD: wdipms
+  #   ports:
+  #     - 3306:3306
+  #   volumes:
+  #     - ./mysql:/var/lib/mysql
+  #   networks:
+  #     - backend-bridge
   wdipms:
     container_name: wdipms
     ports:
@@ -27,8 +27,8 @@ services:
     restart: always
     networks:
       - backend-bridge
-    depends_on:
-      - mysql
+    # depends_on:
+    #   - mysql
     stdin_open: true 
     tty: true
 networks:
