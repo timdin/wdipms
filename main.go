@@ -1,12 +1,11 @@
 package main
 
 import (
-	"fmt"
-
 	"github.com/timdin/wdipms/config"
+	"github.com/timdin/wdipms/storage"
 )
 
 func main() {
 	cfg := config.NewConfig()
-	fmt.Println(cfg.Dumps())
+	storage.InitStorage(cfg.StorageConfig.Conn)
 }

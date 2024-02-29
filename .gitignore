@@ -22,3 +22,6 @@ go.work
 
 # mysql file
 mysql/*
+
+# sqlite database
+wdipms.db
